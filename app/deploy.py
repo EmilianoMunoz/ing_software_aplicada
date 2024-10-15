@@ -63,8 +63,8 @@ def main():
 
     acr_image_tag = f"{parameters['acr_name']}.azurecr.io/{parameters['image_name']}:{parameters['image_version']}"
 
-    # print(f"Escaneando la imagen {image_tag} con Grype...")
-    # run_command(["grype", image_tag], "Error al escanear la imagen con Grype")
+    print(f"Escaneando la imagen {image_tag} con Grype...")
+    run_command(["grype", image_tag], "Error al escanear la imagen con Grype")
 
     print(f"Etiquetando la imagen como {acr_image_tag}...")
     run_command(["docker", "tag", image_tag, acr_image_tag], "Error al etiquetar la imagen Docker")

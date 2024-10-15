@@ -1,0 +1,7 @@
+IMAGE_NAME=app
+CONTAINER_NAME=my-python-app
+IMAGE_TAG=1.0.0
+RESOURCE_GROUP=recurso-aplicada
+LOCATION=eastus
+ACR_NAME=emilianoum
+PORT_CONTAINER=5000
