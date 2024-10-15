@@ -24,10 +24,7 @@ jobs:
     - name: 'Deploy Container App'
       uses: azure/container-apps-deploy-action@v1
       with:
-        # Ruta a los archivos fuente de la aplicación
-        appSourcePath: ./app  # Especifica que los archivos están en la carpeta app
-        # Ruta al Dockerfile dentro de la carpeta app
-        dockerfilePath: ./app/Dockerfile  # Dockerfile está en la carpeta app
+        dockerfilePath: ./app/Dockerfile
         acrName: ${{ secrets.ACR_NAME }}
         acrUsername: ${{ secrets.REGISTRY_USERNAME }}
         acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
